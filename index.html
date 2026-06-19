@@ -84,13 +84,14 @@
     letter-spacing:.08em;text-transform:uppercase;color:var(--gold);
     border-bottom:1px solid var(--rule);padding-bottom:1px;}
   .p-link:hover{border-bottom-color:var(--gold);color:#fff;}
-  .press{margin-top:10px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-dim);}
+  .press{margin-top:10px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);}
   .press .p-link{margin-top:0;}
 
   /* sections */
   section{padding:48px 0;}
   .label{font-size:12.5px;font-weight:700;letter-spacing:.1em;
     text-transform:uppercase;color:var(--gold-dim);margin:0 0 30px;}
+  .work-intro{margin:-16px 0 28px;font-size:14px;color:var(--gold-dim);max-width:60ch;line-height:1.5;}
 
   /* projects */
   .project{padding:28px 0;border-top:1px solid var(--rule);}
@@ -132,13 +133,18 @@
   /* single constrained portrait in a main project */
   .shot.free.cap{height:auto;width:fit-content;max-width:100%;}
   .shot.free.cap img{width:auto;max-width:100%;height:auto;max-height:520px;}
+  /* width-capped landscape lead (keeps lower-res documentary shots sharp) */
+  .shot.free.cap-w{width:min(100%,820px);margin-inline:auto;}
+  .shot.free.cap-w img{width:100%;height:auto;}
 
   /* early projects (collapsible) */
-  details.disc summary{list-style:none;cursor:pointer;display:flex;
-    justify-content:space-between;align-items:center;
+  details.disc summary{list-style:none;cursor:pointer;display:block;
     padding:14px 0;border-top:1px solid var(--rule);
     font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
     color:var(--gold-dim);}
+  details.disc summary .sum-top{display:flex;justify-content:space-between;align-items:center;}
+  details.disc summary .sum-tease{display:block;margin-top:9px;font-size:14px;font-weight:400;
+    letter-spacing:0;text-transform:none;color:var(--gold-dim);line-height:1.5;}
   details.disc summary::-webkit-details-marker{display:none;}
   details.disc summary:hover{color:var(--gold);}
   details.disc summary .chev{font-size:30px;line-height:1;color:var(--gold);transition:transform .2s ease;}
@@ -176,6 +182,7 @@
   @media (max-width:560px){.grp{flex-direction:column;gap:4px;}.grp dt{width:auto;}}
 
   /* contact */
+  .contact-cta{margin:0 0 22px;font-weight:700;font-size:clamp(20px,2.8vw,28px);line-height:1.15;letter-spacing:-.01em;color:var(--gold);max-width:22ch;}
   .contact .links a{display:inline-block;font-weight:700;
     font-size:clamp(20px,2.4vw,30px);letter-spacing:-.01em;
     padding-bottom:2px;border-bottom:2px solid var(--rule);margin:0 0 14px;}
@@ -202,22 +209,34 @@
   </header>
 
   <section class="hero">
-    <p class="lead">Robotics engineer building autonomy on real hardware.</p>
-    <p class="sub">I build robots that fly, drive, perceive, and navigate outside simulation — using ROS 2, ArduPilot, perception, controls, and mechanical design.</p>
+    <p class="lead">I build robots that help in the real world.</p>
+    <p class="sub">At 16, I helped build a robot used alongside firefighters during a puppy rescue. Since then, I've built autonomous aircraft for wildfire detection, competition robots, and mobile robots for real buildings.</p>
   </section>
 
   <section id="work">
     <h2 class="label">Selected work</h2>
+    <p class="work-intro">Machines built to make dangerous, difficult, or repetitive work easier.</p>
 
     <div class="project">
       <div class="p-head"><h3>Porter</h3><span class="p-kind">Autonomous mobile robot</span></div>
-      <p>Building an autonomous indoor delivery robot for hotels, residences, and hospitals. Porter combines a wheeled robot base, secure cargo compartments, LiDAR/depth sensing, and a ROS 2 / Nav2 autonomy stack for indoor navigation.</p>
+      <p>Building an autonomous indoor delivery robot designed to reduce repetitive delivery work for staff in hotels, residences, and hospitals. Porter combines secure cargo compartments, LiDAR and depth sensing, and ROS 2 navigation for real buildings.</p>
       <figure class="shot free"><img src="images/onat-cakici-porter-delivery-robot.jpg" alt="Porter autonomous indoor delivery robot, a CAD render showing the wheeled base, three secure cargo compartments labeled A, B, and C, and an expressive display"></figure>
     </div>
 
     <div class="project">
+      <div class="p-head"><h3>Rescue Robotic Arm</h3><span class="p-kind">Soft robotics / field deployment</span></div>
+      <p>At 16, I helped build a telescoping robotic arm used alongside firefighters to pull a trapped puppy to safety. Built quickly with a soft gripper for field use, the project was covered by Reuters, Euronews, and the New York Post.</p>
+      <p class="press">Covered by <a class="p-link" href="https://www.reuters.com/article/lifestyle/rescue-of-puppy-from-istanbul-well-captivates-turks-idUSKBN15U1Y8/" target="_blank" rel="noopener">Reuters</a> · <a class="p-link" href="https://www.euronews.com/2017/02/15/robotic-arm-used-to-save-puppy-from-well" target="_blank" rel="noopener">Euronews</a> · <a class="p-link" href="https://nypost.com/video/puppy-trapped-in-well-captivates-the-entire-country-of-turkey/" target="_blank" rel="noopener">New York Post</a></p>
+      <figure class="shot free cap-w"><img src="images/rescue-robotic-arm-field-deployment.jpg" alt="Onat Cakici and the search-and-rescue team deploying the pneumatic rescue arm during the well rescue" loading="lazy"></figure>
+      <div class="gallery free bal">
+        <figure class="shot"><img src="images/rescue-robotic-arm-assembled.jpg" alt="The assembled telescoping pneumatic rescue arm with soft gripper, built by Onat Cakici with Team Integra 3646" loading="lazy"></figure>
+        <figure class="shot"><img src="images/onat-cakici-rescue-robotic-arm.jpg" alt="Onat Cakici and a teammate holding the telescoping pneumatic rescue arm and soft gripper they built" loading="lazy"></figure>
+      </div>
+    </div>
+
+    <div class="project">
       <div class="p-head"><h3>Ranger Eye</h3><span class="p-kind">Autonomous VTOL / wildfire</span></div>
-      <p>An autonomous VTOL wildfire-scouting drone with a ground station for launch, recovery, and contact charging. Led a nine-engineer team at Florida Tech and worked across autonomy, flight testing, charging, and ground-station integration.</p>
+      <p>Led a nine-engineer team developing an autonomous VTOL designed to help detect wildfires earlier in remote areas. I worked across autonomy, flight testing, charging, and ground-station integration.</p>
       <a class="p-link" href="https://www.rangereye.org" target="_blank" rel="noopener">rangereye.org ↗</a>
       <figure class="shot free"><img src="images/onat-cakici-ranger-eye-vtol-wildfire-drone.jpg" alt="Onat Cakici with the RangerEye autonomous VTOL wildfire drone at the Florida Tech Student Design Showcase" loading="lazy"></figure>
       <div class="gallery free">
@@ -225,6 +244,16 @@
         <figure class="shot"><img src="images/ranger-eye-team-firefighters-melbourne.jpg" alt="RangerEye engineering team with the drone at a Melbourne fire station" loading="lazy"></figure>
       </div>
       <figure class="shot free"><img src="images/ranger-eye-ground-station-mission-ready.jpg" alt="RangerEye self-charging ground station for autonomous launch, recovery, and recharging" loading="lazy"></figure>
+    </div>
+
+    <div class="project">
+      <div class="p-head"><h3>FRC Robotics · Team Integra 3646</h3><span class="p-kind">Competition robotics</span></div>
+      <p>Designed and built competition robots with Team Integra 3646, contributing to systems that reached the FIRST Championship finals twice. The experience taught me how to build reliable machines under intense deadlines with a large team.</p>
+      <figure class="shot free"><img src="images/onat-cakici-frc-team-integra-3646-robot.jpg" alt="Onat Cakici with the Team Integra 3646 FRC competition robot at the FIRST World Championship" loading="lazy"></figure>
+      <div class="gallery free bal">
+        <figure class="shot"><img src="images/frc-team-integra-3646-competition.jpg" alt="Team Integra 3646 FRC robot lifting a game piece during a FIRST competition match" loading="lazy"></figure>
+        <figure class="shot"><img src="images/frc-team-integra-3646-cad.jpg" alt="SolidWorks CAD model of the Team Integra 3646 FRC robot elevator and drivetrain" loading="lazy"></figure>
+      </div>
     </div>
 
     <div class="project">
@@ -236,57 +265,28 @@
       </div>
     </div>
 
-    <div class="project">
-      <div class="p-head"><h3>FRC Robotics · Team Integra 3646</h3><span class="p-kind">Competition robotics</span></div>
-      <p>Two-time FIRST World Championship finalist as mechanical lead for Team Integra 3646. Worked on drivetrain, mechanisms, CAD, pit operations, and iteration under competition deadlines.</p>
-      <figure class="shot free"><img src="images/onat-cakici-frc-team-integra-3646-robot.jpg" alt="Onat Cakici with the Team Integra 3646 FRC competition robot at the FIRST World Championship" loading="lazy"></figure>
-      <div class="gallery free bal">
-        <figure class="shot"><img src="images/frc-team-integra-3646-competition.jpg" alt="Team Integra 3646 FRC robot lifting a game piece during a FIRST competition match" loading="lazy"></figure>
-        <figure class="shot"><img src="images/frc-team-integra-3646-cad.jpg" alt="SolidWorks CAD model of the Team Integra 3646 FRC robot elevator and drivetrain" loading="lazy"></figure>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="p-head"><h3>Rescue Robotic Arm</h3><span class="p-kind">Soft robotics / field deployment</span></div>
-      <p>A telescoping rescue arm with a soft gripper, built quickly and used alongside firefighters to help pull a trapped puppy to safety. A simple prototype that became a real field deployment.</p>
-      <p class="press">Covered by <a class="p-link" href="https://www.reuters.com/article/lifestyle/rescue-of-puppy-from-istanbul-well-captivates-turks-idUSKBN15U1Y8/" target="_blank" rel="noopener">Reuters ↗</a> · <a class="p-link" href="https://www.euronews.com/2017/02/15/robotic-arm-used-to-save-puppy-from-well" target="_blank" rel="noopener">Euronews ↗</a> · <a class="p-link" href="https://nypost.com/video/puppy-trapped-in-well-captivates-the-entire-country-of-turkey/" target="_blank" rel="noopener">New York Post ↗</a></p>
-      <figure class="shot free"><img src="images/rescue-robotic-arm-assembled.jpg" alt="The assembled telescoping pneumatic rescue arm with soft gripper, built by Onat Cakici with Team Integra 3646" loading="lazy"></figure>
-      <div class="gallery free bal">
-        <figure class="shot"><img src="images/onat-cakici-rescue-robotic-arm.jpg" alt="Onat Cakici and a teammate holding the telescoping pneumatic rescue arm and soft gripper they built" loading="lazy"></figure>
-        <figure class="shot"><img src="images/rescue-robotic-arm-field-deployment.jpg" alt="Onat Cakici and the search-and-rescue team deploying the pneumatic rescue arm during the well rescue" loading="lazy"></figure>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="p-head"><h3>ITU Solar Racing</h3><span class="p-kind">Composites</span></div>
-      <p>Worked on carbon-fiber layups and autoclave curing for the ITU Solar Car Team, gaining early hands-on experience with composite manufacturing and race-vehicle fabrication.</p>
-      <!-- TO ADD A PHOTO: drop the file in images/ then replace the line below with:
-      <figure class="shot"><img src="images/onat-cakici-itu-solar-car-carbon-fiber.jpg" alt="Carbon-fiber composite work on the ITU solar car" loading="lazy"></figure> -->
-      <figure class="shot placeholder"><span>Add photo: images/onat-cakici-itu-solar-car-carbon-fiber.jpg</span></figure>
-    </div>
+    <!-- ITU SOLAR RACING removed from Selected Work (not in current ordering). To restore as a project, re-add a div.project with h3 "ITU Solar Racing", p-kind "Composites", and paragraph: Worked on carbon-fiber layups and autoclave curing for the ITU Solar Car Team, gaining early hands-on experience with composite manufacturing and race-vehicle fabrication. -->
   </section>
 
   <section id="early">
     <details class="disc">
-      <summary><span class="sum-l">Early builds <span class="hint">(click to expand)</span></span> <span class="chev">+</span></summary>
+      <summary><span class="sum-top"><span class="sum-l">Early builds <span class="hint">(click to expand)</span></span> <span class="chev">+</span></span><span class="sum-tease">I started building with solar power at age 11.</span></summary>
       <div class="early-body">
         <p class="early-note">Formative builds from high school and earlier, where the obsession started.</p>
         <div class="early-item">
           <h4>Full-Size Solar Car</h4>
-          <p>Designed and began building a full-scale solar-powered car in the garage during high school.</p>
+          <p>During high school, I designed and began building a full-size solar-powered vehicle in the garage.</p>
           <figure class="shot free"><img src="images/solar-car.jpg" alt="Onat Cakici welding the aluminum space-frame chassis of a full-size solar car during high school" loading="lazy"></figure>
         </div>
         <div class="early-item">
           <h4>RC Solar Car</h4>
-          <p>A radio-controlled solar car, an early hands-on dive into photovoltaics and drivetrain.</p>
+          <p>At age 11, I built a radio-controlled solar car, my first project combining energy, electronics, and mobility.</p>
           <figure class="shot free"><img src="images/rc-solar-car.jpg" alt="Radio-controlled solar car built by a young Onat Cakici" loading="lazy"></figure>
         </div>
         <div class="early-item">
           <h4>Off-Grid Bedroom</h4>
           <p>Wired my room to run off a solar panel, with its own battery and load. Early power-systems tinkering.</p>
-          <!-- TO ADD A PHOTO: replace the line below with:
-          <figure class="shot"><img src="images/off-grid-room.jpg" alt="Bedroom running off a solar panel" loading="lazy"></figure> -->
-          <figure class="shot placeholder"><span>Add photo: images/off-grid-room.jpg</span></figure>
+          <!-- PHOTO PENDING (hidden until available): add as <figure class="shot free"><img src="images/off-grid-room.jpg" alt="Bedroom running off a solar panel, with its own battery and load" loading="lazy"></figure> -->
         </div>
         <div class="early-item">
           <h4>Portable Solar Generator</h4>
@@ -320,7 +320,7 @@
   </section>
 
   <section id="contact" class="contact">
-    <h2 class="label">Get in touch</h2>
+    <p class="contact-cta">Building something useful? Let's talk.</p>
     <div class="links">
       <a href="mailto:onatcakici@protonmail.com">onatcakici@protonmail.com</a>
       <a href="https://www.linkedin.com/in/cakici/">linkedin.com/in/cakici</a>
