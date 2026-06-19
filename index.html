@@ -126,8 +126,12 @@
   .early-item .shot.free{height:auto;width:fit-content;max-width:100%;}
   .early-item .shot.free img{width:auto;max-width:100%;height:auto;max-height:300px;}
   /* balanced mixed-orientation gallery row (equal image height, centered) */
+  .gallery.free.bal{align-items:center;}
   .gallery.free.bal .shot{width:fit-content;margin-inline:auto;}
   .gallery.free.bal .shot img{width:auto;max-width:100%;max-height:430px;margin-inline:auto;}
+  /* single constrained portrait in a main project */
+  .shot.free.cap{height:auto;width:fit-content;max-width:100%;}
+  .shot.free.cap img{width:auto;max-width:100%;height:auto;max-height:520px;}
 
   /* early projects (collapsible) */
   details.disc summary{list-style:none;cursor:pointer;display:flex;
@@ -247,9 +251,11 @@
       <div class="p-head"><h3>Rescue Robotic Arm</h3><span class="p-kind">Soft robotics / field deployment</span></div>
       <p>A telescoping rescue arm with a soft gripper, built quickly and used alongside firefighters to help pull a trapped puppy to safety. A simple prototype that became a real field deployment.</p>
       <p class="press">Covered by <a class="p-link" href="https://www.reuters.com/article/lifestyle/rescue-of-puppy-from-istanbul-well-captivates-turks-idUSKBN15U1Y8/" target="_blank" rel="noopener">Reuters ↗</a> · <a class="p-link" href="https://www.euronews.com/2017/02/15/robotic-arm-used-to-save-puppy-from-well" target="_blank" rel="noopener">Euronews ↗</a> · <a class="p-link" href="https://nypost.com/video/puppy-trapped-in-well-captivates-the-entire-country-of-turkey/" target="_blank" rel="noopener">New York Post ↗</a></p>
-      <!-- TO ADD A PHOTO: drop the file in images/ then replace the line below with:
-      <figure class="shot"><img src="images/onat-cakici-rescue-robotic-arm.jpg" alt="Telescoping rescue robotic arm with a soft gripper" loading="lazy"></figure> -->
-      <figure class="shot placeholder"><span>Add photo: images/onat-cakici-rescue-robotic-arm.jpg</span></figure>
+      <figure class="shot free"><img src="images/rescue-robotic-arm-assembled.jpg" alt="The assembled telescoping pneumatic rescue arm with soft gripper, built by Onat Cakici with Team Integra 3646" loading="lazy"></figure>
+      <div class="gallery free bal">
+        <figure class="shot"><img src="images/onat-cakici-rescue-robotic-arm.jpg" alt="Onat Cakici and a teammate holding the telescoping pneumatic rescue arm and soft gripper they built" loading="lazy"></figure>
+        <figure class="shot"><img src="images/rescue-robotic-arm-field-deployment.jpg" alt="Onat Cakici and the search-and-rescue team deploying the pneumatic rescue arm during the well rescue" loading="lazy"></figure>
+      </div>
     </div>
 
     <div class="project">
