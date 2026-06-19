@@ -84,6 +84,8 @@
     letter-spacing:.08em;text-transform:uppercase;color:var(--gold);
     border-bottom:1px solid var(--rule);padding-bottom:1px;}
   .p-link:hover{border-bottom-color:var(--gold);color:#fff;}
+  .press{margin-top:10px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-dim);}
+  .press .p-link{margin-top:0;}
 
   /* sections */
   section{padding:48px 0;}
@@ -120,6 +122,12 @@
   .shot.free,.gallery.free .shot{height:auto;background:none;}
   .shot.free img,.gallery.free .shot img{height:auto;}
   .gallery.free{align-items:start;}
+  /* early-build photos: framed snapshots at a consistent height */
+  .early-item .shot.free{height:auto;width:fit-content;max-width:100%;}
+  .early-item .shot.free img{width:auto;max-width:100%;height:auto;max-height:300px;}
+  /* balanced mixed-orientation gallery row (equal image height, centered) */
+  .gallery.free.bal .shot{width:fit-content;margin-inline:auto;}
+  .gallery.free.bal .shot img{width:auto;max-width:100%;max-height:430px;margin-inline:auto;}
 
   /* early projects (collapsible) */
   details.disc summary{list-style:none;cursor:pointer;display:flex;
@@ -228,14 +236,17 @@
     <div class="project">
       <div class="p-head"><h3>FRC Robotics · Team Integra 3646</h3><span class="p-kind">Competition robotics</span></div>
       <p>Two-time FIRST World Championship finalist as mechanical lead for Team Integra 3646. Worked on drivetrain, mechanisms, CAD, pit operations, and iteration under competition deadlines.</p>
-      <!-- TO ADD A PHOTO: drop the file in images/ then replace the line below with:
-      <figure class="shot"><img src="images/onat-cakici-frc-team-integra-3646-robot.jpg" alt="FRC competition robot built by Team Integra 3646" loading="lazy"></figure> -->
-      <figure class="shot placeholder"><span>Add photo: images/onat-cakici-frc-team-integra-3646-robot.jpg</span></figure>
+      <figure class="shot free"><img src="images/onat-cakici-frc-team-integra-3646-robot.jpg" alt="Onat Cakici with the Team Integra 3646 FRC competition robot at the FIRST World Championship" loading="lazy"></figure>
+      <div class="gallery free bal">
+        <figure class="shot"><img src="images/frc-team-integra-3646-competition.jpg" alt="Team Integra 3646 FRC robot lifting a game piece during a FIRST competition match" loading="lazy"></figure>
+        <figure class="shot"><img src="images/frc-team-integra-3646-cad.jpg" alt="SolidWorks CAD model of the Team Integra 3646 FRC robot elevator and drivetrain" loading="lazy"></figure>
+      </div>
     </div>
 
     <div class="project">
       <div class="p-head"><h3>Rescue Robotic Arm</h3><span class="p-kind">Soft robotics / field deployment</span></div>
       <p>A telescoping rescue arm with a soft gripper, built quickly and used alongside firefighters to help pull a trapped puppy to safety. A simple prototype that became a real field deployment.</p>
+      <p class="press">Covered by <a class="p-link" href="https://www.reuters.com/article/lifestyle/rescue-of-puppy-from-istanbul-well-captivates-turks-idUSKBN15U1Y8/" target="_blank" rel="noopener">Reuters ↗</a> · <a class="p-link" href="https://www.euronews.com/2017/02/15/robotic-arm-used-to-save-puppy-from-well" target="_blank" rel="noopener">Euronews ↗</a> · <a class="p-link" href="https://nypost.com/video/puppy-trapped-in-well-captivates-the-entire-country-of-turkey/" target="_blank" rel="noopener">New York Post ↗</a></p>
       <!-- TO ADD A PHOTO: drop the file in images/ then replace the line below with:
       <figure class="shot"><img src="images/onat-cakici-rescue-robotic-arm.jpg" alt="Telescoping rescue robotic arm with a soft gripper" loading="lazy"></figure> -->
       <figure class="shot placeholder"><span>Add photo: images/onat-cakici-rescue-robotic-arm.jpg</span></figure>
@@ -265,9 +276,7 @@
         <div class="early-item">
           <h4>RC Solar Car</h4>
           <p>A radio-controlled solar car, an early hands-on dive into photovoltaics and drivetrain.</p>
-          <!-- TO ADD A PHOTO: replace the line below with:
-          <figure class="shot"><img src="images/rc-solar-car.jpg" alt="RC solar-powered car" loading="lazy"></figure> -->
-          <figure class="shot placeholder"><span>Add photo: images/rc-solar-car.jpg</span></figure>
+          <figure class="shot free"><img src="images/rc-solar-car.jpg" alt="Radio-controlled solar car built by a young Onat Cakici" loading="lazy"></figure>
         </div>
         <div class="early-item">
           <h4>Off-Grid Bedroom</h4>
@@ -279,9 +288,7 @@
         <div class="early-item">
           <h4>Portable Solar Generator</h4>
           <p>Built a self-contained portable solar generator with a panel, battery storage, charge control, and AC/DC outputs in a carry-around unit.</p>
-          <!-- TO ADD A PHOTO: replace the line below with:
-          <figure class="shot"><img src="images/solar-generator.jpg" alt="Portable solar generator" loading="lazy"></figure> -->
-          <figure class="shot placeholder"><span>Add photo: images/solar-generator.jpg</span></figure>
+          <figure class="shot free"><img src="images/solar-generator.jpg" alt="Young Onat Cakici presenting his portable solar generator at a science fair" loading="lazy"></figure>
         </div>
       </div>
     </details>
