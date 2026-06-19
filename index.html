@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Onat Cakici · Robotics Engineer · Autonomous Systems</title>
-<link rel="canonical" href="https://onatcakici.github.io/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%2348577a'/><circle cx='32' cy='11' r='3.2' fill='%23e8ce88'/><rect x='30.6' y='13' width='2.8' height='6' fill='%23e8ce88'/><rect x='15' y='19' width='34' height='28' rx='8' fill='%23e8ce88'/><rect x='21' y='27' width='22' height='9' rx='4.5' fill='%2348577a'/><circle cx='27' cy='31.5' r='2.4' fill='%23e8ce88'/><circle cx='37' cy='31.5' r='2.4' fill='%23e8ce88'/><rect x='11' y='28' width='4' height='10' rx='2' fill='%23e8ce88'/><rect x='49' y='28' width='4' height='10' rx='2' fill='%23e8ce88'/></svg>">
-<meta name="description" content="Onat Cakici is a robotics engineer building autonomous systems on real hardware — perception, autonomy, and controls. Projects include Porter, Ranger Eye, and FRC. FAA Part 107.">
+<meta name="description" content="Onat Cakici is a robotics engineer building autonomous systems on real hardware, including indoor delivery robots, VTOL drones, quadcopters, and competition robots.">
+<link rel="canonical" href="https://onatcakici.github.io/">
+
 <!-- SEO / social -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Onat Cakici · Robotics Engineer">
@@ -48,12 +49,17 @@
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
   body{margin:0;background:var(--frame);font-family:var(--sans);
     color:var(--gold);-webkit-font-smoothing:antialiased;padding:var(--pad);}
+
   .frame{max-width:none;margin:0;background:var(--blue);
     min-height:calc(100vh - var(--pad) - var(--pad));
     padding:34px clamp(20px,4vw,52px) 52px;}
+  /* content sits in a centered column on the canvas */
   .frame>.masthead,.frame>section,.frame>footer{max-width:1280px;margin-inline:auto;}
+
   a{color:inherit;text-decoration:none;}
   a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+
+  /* masthead */
   .masthead{display:flex;flex-direction:column;gap:14px;}
   .nav-row{display:flex;justify-content:space-between;align-items:flex-start;
     gap:24px;flex-wrap:wrap;}
@@ -64,6 +70,8 @@
   .navgroup{display:flex;flex-direction:column;}
   .navgroup a:hover,.navlink a:hover{color:#fff;}
   .nav-row .navlink.muted,.navgroup.muted a{color:var(--gold-dim);}
+
+  /* hero */
   .hero{padding:60px 0 12px;}
   .hero .lead{margin:0;max-width:20ch;font-weight:700;
     font-size:clamp(27px,3.5vw,44px);line-height:1.08;letter-spacing:-.01em;}
@@ -76,9 +84,13 @@
     letter-spacing:.08em;text-transform:uppercase;color:var(--gold);
     border-bottom:1px solid var(--rule);padding-bottom:1px;}
   .p-link:hover{border-bottom-color:var(--gold);color:#fff;}
+
+  /* sections */
   section{padding:48px 0;}
   .label{font-size:12.5px;font-weight:700;letter-spacing:.1em;
     text-transform:uppercase;color:var(--gold-dim);margin:0 0 30px;}
+
+  /* projects */
   .project{padding:28px 0;border-top:1px solid var(--rule);}
   .project:first-of-type{border-top:none;padding-top:0;}
   .p-head{display:flex;justify-content:space-between;align-items:baseline;
@@ -91,6 +103,8 @@
     line-height:1.55;max-width:66ch;}
   .tags{font-size:12px;font-weight:700;letter-spacing:.05em;
     text-transform:uppercase;color:var(--gold-dim);line-height:1.9;}
+
+  /* image slot */
   .shot{width:100%;height:clamp(220px,42vw,440px);margin:20px 0 2px;
     border:1px solid var(--rule);background:rgba(0,0,0,.14);overflow:hidden;}
   .shot img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
@@ -102,6 +116,12 @@
   @media (min-width:620px){.gallery{grid-template-columns:1fr 1fr;}}
   .gallery .shot{margin:0;height:clamp(180px,30vw,300px);}
   .gallery .shot.placeholder{height:clamp(180px,30vw,300px);}
+  /* natural-aspect images (no crop) for photos with faces or text */
+  .shot.free,.gallery.free .shot{height:auto;background:none;}
+  .shot.free img,.gallery.free .shot img{height:auto;}
+  .gallery.free{align-items:start;}
+
+  /* early projects (collapsible) */
   details.disc summary{list-style:none;cursor:pointer;display:flex;
     justify-content:space-between;align-items:center;
     padding:14px 0;border-top:1px solid var(--rule);
@@ -122,6 +142,8 @@
   .early-item p{margin:0;font-size:15px;line-height:1.5;color:var(--gold-dim);max-width:64ch;}
   .early-item .shot{margin:14px 0 2px;height:clamp(150px,30vw,260px);}
   .early-item .shot.placeholder{height:clamp(120px,22vw,180px);}
+
+  /* rows: experience */
   .row{display:flex;justify-content:space-between;gap:24px;
     padding:16px 0;border-top:1px solid var(--rule);}
   .row:first-of-type{border-top:none;}
@@ -132,17 +154,22 @@
     text-transform:uppercase;white-space:nowrap;text-align:right;color:var(--gold-dim);}
   @media (max-width:560px){.row{flex-direction:column;gap:4px;}
     .row .meta{text-align:left;}}
+
+  /* skills */
   .grp{display:flex;gap:24px;padding:14px 0;border-top:1px solid var(--rule);}
   .grp:first-of-type{border-top:none;}
   .grp dt{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
     color:var(--gold-dim);width:170px;flex:none;padding-top:2px;}
   .grp dd{margin:0;font-weight:700;font-size:16px;letter-spacing:.01em;}
   @media (max-width:560px){.grp{flex-direction:column;gap:4px;}.grp dt{width:auto;}}
+
+  /* contact */
   .contact .links a{display:inline-block;font-weight:700;
     font-size:clamp(20px,2.4vw,30px);letter-spacing:-.01em;
     padding-bottom:2px;border-bottom:2px solid var(--rule);margin:0 0 14px;}
   .contact .links a:hover{border-bottom-color:var(--gold);color:#fff;}
   .contact .links{display:flex;flex-direction:column;align-items:flex-start;}
+
   footer{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
     padding-top:40px;border-top:1px solid var(--rule);
     font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
@@ -151,6 +178,7 @@
 </head>
 <body>
 <div class="frame">
+
   <header class="masthead">
     <div class="nav-row">
       <h1 class="brand">Onat Cakici</h1>
@@ -160,12 +188,15 @@
       <span class="navlink muted">FL, USA</span>
     </div>
   </header>
+
   <section class="hero">
     <p class="lead">Robotics engineer building autonomy on real hardware.</p>
     <p class="sub">I build robots that fly, drive, perceive, and navigate outside simulation — using ROS 2, ArduPilot, perception, controls, and mechanical design.</p>
   </section>
+
   <section id="work">
     <h2 class="label">Selected work</h2>
+
     <div class="project">
       <div class="p-head"><h3>Porter</h3><span class="p-kind">Autonomous mobile robot</span></div>
       <p>Building an autonomous indoor delivery robot for hotels, residences, and hospitals. Porter combines a wheeled robot base, secure cargo compartments, LiDAR/depth sensing, and a ROS 2 / Nav2 autonomy stack for indoor navigation.</p>
@@ -173,43 +204,51 @@
       <figure class="shot"><img src="images/onat-cakici-porter-delivery-robot.jpg" alt="Porter autonomous indoor delivery robot built by Onat Cakici" loading="lazy"></figure> -->
       <figure class="shot placeholder"><span>Add photo: images/onat-cakici-porter-delivery-robot.jpg</span></figure>
     </div>
+
     <div class="project">
       <div class="p-head"><h3>Ranger Eye</h3><span class="p-kind">Autonomous VTOL / wildfire</span></div>
       <p>An autonomous VTOL wildfire-scouting drone with a ground station for launch, recovery, and contact charging. Led a nine-engineer team at Florida Tech and worked across autonomy, flight testing, charging, and ground-station integration.</p>
       <a class="p-link" href="https://www.rangereye.org" target="_blank" rel="noopener">rangereye.org ↗</a>
-      <!-- TO ADD A PHOTO: drop the file in images/ then replace the line below with:
-      <figure class="shot"><img src="images/onat-cakici-ranger-eye-vtol-drone.jpg" alt="Ranger Eye autonomous VTOL wildfire-scouting drone led by Onat Cakici" loading="lazy"></figure> -->
-      <figure class="shot placeholder"><span>Add photo: images/onat-cakici-ranger-eye-vtol-drone.jpg</span></figure>
+      <figure class="shot free"><img src="images/onat-cakici-ranger-eye-vtol-wildfire-drone.jpg" alt="Onat Cakici with the RangerEye autonomous VTOL wildfire drone at the Florida Tech Student Design Showcase" loading="lazy"></figure>
+      <div class="gallery free">
+        <figure class="shot"><img src="images/ranger-eye-ground-station-mission-ready.jpg" alt="RangerEye self-charging ground station for autonomous launch, recovery, and recharging" loading="lazy"></figure>
+        <figure class="shot"><img src="images/ranger-eye-team-firefighters-melbourne.jpg" alt="RangerEye engineering team with the drone at a Melbourne fire station" loading="lazy"></figure>
+      </div>
     </div>
+
     <div class="project">
       <div class="p-head"><h3>Quadcopters</h3><span class="p-kind">Autonomous UAV / perception</span></div>
       <p>Custom quadcopters built, tuned, and flown for waypoint missions, onboard vision, and experimental robotics work. Worked across flight control, PID tuning, OpenCV, and Raspberry Pi-based autonomy.</p>
       <!-- TO ADD A PHOTO: drop the file in images/ then replace the line below with:
-      <figure class="shot"><img src="images/onat-cakici-ardupilot-quadcopter.jpg" alt="Custom-built autonomous ArduPilot quadcopter by Onat Cakici" loading="lazy"></figure> -->
-      <figure class="shot placeholder"><span>Add photo: images/onat-cakici-ardupilot-quadcopter.jpg</span></figure>
+      <figure class="shot"><img src="images/onat-cakici-autonomous-quadcopter.jpg" alt="Custom-built autonomous quadcopter with onboard vision" loading="lazy"></figure> -->
+      <figure class="shot placeholder"><span>Add photo: images/onat-cakici-autonomous-quadcopter.jpg</span></figure>
     </div>
+
     <div class="project">
       <div class="p-head"><h3>FRC Robotics · Team Integra 3646</h3><span class="p-kind">Competition robotics</span></div>
       <p>Two-time FIRST World Championship finalist as mechanical lead for Team Integra 3646. Worked on drivetrain, mechanisms, CAD, pit operations, and iteration under competition deadlines.</p>
       <!-- TO ADD A PHOTO: drop the file in images/ then replace the line below with:
-      <figure class="shot"><img src="images/onat-cakici-frc-team-integra-3646-robot.jpg" alt="FRC competition robot built by Onat Cakici with Team Integra 3646" loading="lazy"></figure> -->
+      <figure class="shot"><img src="images/onat-cakici-frc-team-integra-3646-robot.jpg" alt="FRC competition robot built by Team Integra 3646" loading="lazy"></figure> -->
       <figure class="shot placeholder"><span>Add photo: images/onat-cakici-frc-team-integra-3646-robot.jpg</span></figure>
     </div>
+
     <div class="project">
       <div class="p-head"><h3>Rescue Robotic Arm</h3><span class="p-kind">Soft robotics / field deployment</span></div>
       <p>A telescoping rescue arm with a soft gripper, built quickly and used alongside firefighters to help pull a trapped puppy to safety. A simple prototype that became a real field deployment.</p>
       <!-- TO ADD A PHOTO: drop the file in images/ then replace the line below with:
-      <figure class="shot"><img src="images/onat-cakici-rescue-robotic-arm.jpg" alt="Telescoping rescue robotic arm with soft gripper built by Onat Cakici" loading="lazy"></figure> -->
+      <figure class="shot"><img src="images/onat-cakici-rescue-robotic-arm.jpg" alt="Telescoping rescue robotic arm with a soft gripper" loading="lazy"></figure> -->
       <figure class="shot placeholder"><span>Add photo: images/onat-cakici-rescue-robotic-arm.jpg</span></figure>
     </div>
+
     <div class="project">
       <div class="p-head"><h3>ITU Solar Racing</h3><span class="p-kind">Composites</span></div>
       <p>Worked on carbon-fiber layups and autoclave curing for the ITU Solar Car Team, gaining early hands-on experience with composite manufacturing and race-vehicle fabrication.</p>
       <!-- TO ADD A PHOTO: drop the file in images/ then replace the line below with:
-      <figure class="shot"><img src="images/onat-cakici-itu-solar-car-composites.jpg" alt="Carbon-fiber composite work on the ITU solar car by Onat Cakici" loading="lazy"></figure> -->
-      <figure class="shot placeholder"><span>Add photo: images/onat-cakici-itu-solar-car-composites.jpg</span></figure>
+      <figure class="shot"><img src="images/onat-cakici-itu-solar-car-carbon-fiber.jpg" alt="Carbon-fiber composite work on the ITU solar car" loading="lazy"></figure> -->
+      <figure class="shot placeholder"><span>Add photo: images/onat-cakici-itu-solar-car-carbon-fiber.jpg</span></figure>
     </div>
   </section>
+
   <section id="early">
     <details class="disc">
       <summary><span class="sum-l">Early builds <span class="hint">(click to expand)</span></span> <span class="chev">+</span></summary>
@@ -219,33 +258,34 @@
           <h4>Full-Size Solar Car</h4>
           <p>Designed and began building a full-scale solar-powered car in the garage during high school.</p>
           <!-- TO ADD A PHOTO: replace the line below with:
-          <figure class="shot"><img src="images/onat-cakici-full-size-solar-car.jpg" alt="Full-size solar car built by Onat Cakici" loading="lazy"></figure> -->
-          <figure class="shot placeholder"><span>Add photo: images/onat-cakici-full-size-solar-car.jpg</span></figure>
+          <figure class="shot"><img src="images/solar-car.jpg" alt="Full-size solar car build" loading="lazy"></figure> -->
+          <figure class="shot placeholder"><span>Add photo: images/solar-car.jpg</span></figure>
         </div>
         <div class="early-item">
           <h4>RC Solar Car</h4>
           <p>A radio-controlled solar car, an early hands-on dive into photovoltaics and drivetrain.</p>
           <!-- TO ADD A PHOTO: replace the line below with:
-          <figure class="shot"><img src="images/onat-cakici-rc-solar-car.jpg" alt="RC solar-powered car built by Onat Cakici" loading="lazy"></figure> -->
-          <figure class="shot placeholder"><span>Add photo: images/onat-cakici-rc-solar-car.jpg</span></figure>
+          <figure class="shot"><img src="images/rc-solar-car.jpg" alt="RC solar-powered car" loading="lazy"></figure> -->
+          <figure class="shot placeholder"><span>Add photo: images/rc-solar-car.jpg</span></figure>
         </div>
         <div class="early-item">
           <h4>Off-Grid Bedroom</h4>
           <p>Wired my room to run off a solar panel, with its own battery and load. Early power-systems tinkering.</p>
           <!-- TO ADD A PHOTO: replace the line below with:
-          <figure class="shot"><img src="images/onat-cakici-off-grid-solar-bedroom.jpg" alt="Bedroom running off a solar panel wired by Onat Cakici" loading="lazy"></figure> -->
-          <figure class="shot placeholder"><span>Add photo: images/onat-cakici-off-grid-solar-bedroom.jpg</span></figure>
+          <figure class="shot"><img src="images/off-grid-room.jpg" alt="Bedroom running off a solar panel" loading="lazy"></figure> -->
+          <figure class="shot placeholder"><span>Add photo: images/off-grid-room.jpg</span></figure>
         </div>
         <div class="early-item">
           <h4>Portable Solar Generator</h4>
           <p>Built a self-contained portable solar generator with a panel, battery storage, charge control, and AC/DC outputs in a carry-around unit.</p>
           <!-- TO ADD A PHOTO: replace the line below with:
-          <figure class="shot"><img src="images/onat-cakici-portable-solar-generator.jpg" alt="Portable solar generator built by Onat Cakici" loading="lazy"></figure> -->
-          <figure class="shot placeholder"><span>Add photo: images/onat-cakici-portable-solar-generator.jpg</span></figure>
+          <figure class="shot"><img src="images/solar-generator.jpg" alt="Portable solar generator" loading="lazy"></figure> -->
+          <figure class="shot placeholder"><span>Add photo: images/solar-generator.jpg</span></figure>
         </div>
       </div>
     </details>
   </section>
+
   <section id="experience">
     <h2 class="label">Education</h2>
     <div class="row">
@@ -254,6 +294,7 @@
       <div class="meta">2025</div>
     </div>
   </section>
+
   <section id="skills">
     <h2 class="label">Capabilities</h2>
     <dl style="margin:0;">
@@ -266,6 +307,7 @@
       <div class="grp"><dt>Certified</dt><dd>FAA Part 107 Remote Pilot · Private Pilot in progress</dd></div>
     </dl>
   </section>
+
   <section id="contact" class="contact">
     <h2 class="label">Get in touch</h2>
     <div class="links">
@@ -273,9 +315,11 @@
       <a href="https://www.linkedin.com/in/cakici/">linkedin.com/in/cakici</a>
     </div>
   </section>
+
   <footer>
     <span>Onat Cakici &copy; 2026 · Robotics Engineer</span>
   </footer>
+
 </div>
 </body>
 </html>
