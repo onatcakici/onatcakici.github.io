@@ -122,10 +122,12 @@
   /* natural-aspect images (no crop) for photos with faces or text */
   .shot.free,.gallery.free .shot{height:auto;background:none;}
   .shot.free img,.gallery.free .shot img{height:auto;}
+  .shot.free video{width:100%;aspect-ratio:16/9;height:auto;display:block;background:#000;object-fit:contain;}
   .gallery.free{align-items:start;}
   /* early-build photos: framed snapshots at a consistent height */
   .early-item .shot.free{height:auto;width:fit-content;max-width:100%;}
   .early-item .shot.free img{width:auto;max-width:100%;height:auto;max-height:300px;}
+  .early-item .shot.free.lg img{max-height:480px;}
   /* balanced mixed-orientation gallery row (equal image height, centered) */
   .gallery.free.bal{align-items:center;}
   .gallery.free.bal .shot{width:fit-content;margin-inline:auto;}
@@ -225,12 +227,13 @@
 
     <div class="project">
       <div class="p-head"><h3>Rescue Robotic Arm</h3><span class="p-kind">Soft robotics / field deployment</span></div>
-      <p>At 16, I helped build a telescoping robotic arm used alongside firefighters to pull a trapped puppy to safety. Built quickly with a soft gripper for field use, the project was covered by Reuters, Euronews, and the New York Post.</p>
+      <p>At 16, I helped build a telescoping robotic arm used alongside firefighters to pull a trapped puppy to safety. We heard the news while preparing for a robotics competition and built it within three hours, with a soft gripper for field use.</p>
       <p class="press">Covered by <a class="p-link" href="https://www.reuters.com/article/lifestyle/rescue-of-puppy-from-istanbul-well-captivates-turks-idUSKBN15U1Y8/" target="_blank" rel="noopener">Reuters</a> · <a class="p-link" href="https://www.euronews.com/2017/02/15/robotic-arm-used-to-save-puppy-from-well" target="_blank" rel="noopener">Euronews</a> · <a class="p-link" href="https://nypost.com/video/puppy-trapped-in-well-captivates-the-entire-country-of-turkey/" target="_blank" rel="noopener">New York Post</a></p>
-      <figure class="shot free"><img src="images/rescue-robotic-arm-well-deployment.jpg" alt="Rescuers operating the telescoping pneumatic rescue arm down into the well during the puppy rescue" loading="lazy"></figure>
+      <figure class="shot free"><video src="images/rescue-documentary.mp4" controls playsinline preload="metadata"></video></figure>
+      <figure class="shot free"><img src="images/rescue-robotic-arm-lowered-into-well.jpg" alt="Onat Cakici connecting the battery to charge the pneumatic reservoir for the rescue arm's gripper during the well rescue" loading="lazy"></figure>
       <div class="gallery free bal">
         <figure class="shot"><img src="images/onat-cakici-rescue-robotic-arm.jpg" alt="Onat Cakici and a teammate holding the telescoping pneumatic rescue arm and soft gripper they built" loading="lazy"></figure>
-        <figure class="shot"><img src="images/rescue-robotic-arm-lowered-into-well.jpg" alt="Onat Cakici connecting the battery to charge the pneumatic reservoir for the rescue arm's gripper during the well rescue" loading="lazy"></figure>
+        <figure class="shot"><img src="images/rescue-robotic-arm-assembled.jpg" alt="The assembled telescoping pneumatic rescue arm with soft gripper, built by Onat Cakici with Team Integra 3646" loading="lazy"></figure>
       </div>
     </div>
 
@@ -238,6 +241,7 @@
       <div class="p-head"><h3>Ranger Eye</h3><span class="p-kind">Autonomous VTOL / wildfire</span></div>
       <p>Led a nine-engineer team developing an autonomous VTOL designed to help detect wildfires earlier in remote areas. I worked across autonomy, flight testing, charging, and ground-station integration.</p>
       <a class="p-link" href="https://www.rangereye.org" target="_blank" rel="noopener">rangereye.org ↗</a>
+      <figure class="shot free"><video src="images/rangereye-lights.mp4" autoplay muted loop playsinline></video></figure>
       <figure class="shot free"><img src="images/onat-cakici-ranger-eye-vtol-wildfire-drone.jpg" alt="Onat Cakici with the RangerEye autonomous VTOL wildfire drone at the Florida Tech Student Design Showcase" loading="lazy"></figure>
       <div class="gallery free">
         <figure class="shot"><img src="images/ranger-eye-aircraft-docked-ground-station.jpg" alt="RangerEye VTOL drone docked in its self-charging ground station" loading="lazy"></figure>
@@ -249,6 +253,7 @@
     <div class="project">
       <div class="p-head"><h3>FRC Robotics · Team Integra 3646</h3><span class="p-kind">Competition robotics</span></div>
       <p>Designed and built competition robots with Team Integra 3646, contributing to systems that reached the FIRST Championship finals twice. The experience taught me how to build reliable machines under intense deadlines with a large team.</p>
+      <figure class="shot free"><video src="images/frc-robot.mp4" autoplay muted loop playsinline></video></figure>
       <figure class="shot free"><img src="images/onat-cakici-frc-team-integra-3646-robot.jpg" alt="Onat Cakici with the Team Integra 3646 FRC competition robot at the FIRST World Championship" loading="lazy"></figure>
       <div class="gallery free bal">
         <figure class="shot"><img src="images/frc-team-integra-3646-competition.jpg" alt="Team Integra 3646 FRC robot lifting a game piece during a FIRST competition match" loading="lazy"></figure>
@@ -281,7 +286,7 @@
         <div class="early-item">
           <h4>RC Solar Car</h4>
           <p>At age 11, I built a radio-controlled solar car, my first project combining energy, electronics, and mobility.</p>
-          <figure class="shot free"><img src="images/rc-solar-car.jpg" alt="Radio-controlled solar car built by a young Onat Cakici" loading="lazy"></figure>
+          <figure class="shot free lg"><img src="images/rc-solar-car.jpg" alt="Radio-controlled solar car built by a young Onat Cakici" loading="lazy"></figure>
         </div>
         <div class="early-item">
           <h4>Off-Grid Bedroom</h4>
