@@ -124,7 +124,7 @@
   .shot.free img,.gallery.free .shot img{height:auto;}
   .shot.free video{width:100%;aspect-ratio:16/9;height:auto;display:block;background:#000;object-fit:contain;}
   .shot.free.cap-fig{border:none;}
-  .shot.free.cap-fig img{border:1px solid var(--rule);}
+  .shot.free.cap-fig img,.shot.free.cap-fig video{border:1px solid var(--rule);}
   figcaption.cap-text{margin-top:10px;font-size:13.5px;line-height:1.55;color:var(--gold-dim);max-width:72ch;}
   .gallery.free{align-items:start;}
   /* early-build photos: framed snapshots at a consistent height */
@@ -232,7 +232,7 @@
       <div class="p-head"><h3>Rescue Robotic Arm</h3><span class="p-kind">Soft robotics / field deployment</span></div>
       <p>At 16, I helped build a telescoping robotic arm used alongside firefighters to pull a trapped puppy to safety. We heard the news while preparing for a robotics competition and built it within three hours, with a soft gripper for field use.</p>
       <p class="press">Covered by <a class="p-link" href="https://www.reuters.com/article/lifestyle/rescue-of-puppy-from-istanbul-well-captivates-turks-idUSKBN15U1Y8/" target="_blank" rel="noopener">Reuters</a> · <a class="p-link" href="https://www.euronews.com/2017/02/15/robotic-arm-used-to-save-puppy-from-well" target="_blank" rel="noopener">Euronews</a> · <a class="p-link" href="https://nypost.com/video/puppy-trapped-in-well-captivates-the-entire-country-of-turkey/" target="_blank" rel="noopener">New York Post</a></p>
-      <figure class="shot free"><video src="images/rescue-documentary.mp4" controls playsinline preload="metadata"></video></figure>
+      <figure class="shot free cap-fig"><video src="images/rescue-documentary.mp4" controls playsinline preload="metadata"></video><figcaption class="cap-text">Footage from the Japanese TV program 奇跡体験!アンビリバボー (Kiseki Taiken! Unbelievable), which featured the rescue.</figcaption></figure>
       <figure class="shot free cap-fig"><img src="images/rescue-robotic-arm-lowered-into-well.jpg" alt="Onat Cakici connecting the battery to charge the pneumatic reservoir for the rescue arm's gripper during the well rescue" loading="lazy"><figcaption class="cap-text">Connecting the battery to recharge the gripper's pneumatic tanks after a line broke, just before we lowered the arm into the well.</figcaption></figure>
       <div class="gallery free bal">
         <figure class="shot"><img src="images/onat-cakici-rescue-robotic-arm.jpg" alt="Onat Cakici and a teammate holding the telescoping pneumatic rescue arm and soft gripper they built" loading="lazy"></figure>
