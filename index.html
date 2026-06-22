@@ -127,6 +127,10 @@
   .shot.free.cap-fig img,.shot.free.cap-fig video{border:1px solid var(--rule);}
   .shot.free.portrait{border:none;background:none;max-width:300px;margin-left:auto;margin-right:auto;}
   .shot.free.portrait video{aspect-ratio:9/16;border:1px solid var(--rule);background:#000;}
+  .vid-aside{display:flex;gap:36px;align-items:center;justify-content:center;}
+  .vid-aside .shot.free.portrait{flex:0 0 300px;margin:0;}
+  .vid-aside .aside-text{color:var(--gold);font-size:clamp(19px,2.3vw,26px);line-height:1.5;letter-spacing:.01em;max-width:24ch;}
+  @media (max-width:620px){.vid-aside{flex-direction:column;align-items:center;gap:14px;text-align:center;}.vid-aside .aside-text{max-width:38ch;}}
   figcaption.cap-text{margin-top:10px;font-size:13.5px;line-height:1.55;color:var(--gold-dim);max-width:72ch;}
   .gallery.free{align-items:start;}
   /* early-build photos: framed snapshots at a consistent height */
@@ -150,12 +154,13 @@
     font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
     color:var(--gold-dim);}
   details.disc summary .sum-top{display:flex;justify-content:space-between;align-items:center;}
+  details.disc summary .sum-l{font-size:clamp(21px,2.6vw,30px);letter-spacing:.01em;}
   details.disc summary .sum-tease{display:block;margin-top:9px;font-size:14px;font-weight:400;
     letter-spacing:0;text-transform:none;color:var(--gold-dim);line-height:1.5;}
   details.disc summary::-webkit-details-marker{display:none;}
   details.disc summary:hover{color:var(--gold);}
   details.disc summary .chev{font-size:30px;line-height:1;color:var(--gold);transition:transform .2s ease;}
-  details.disc summary .hint{display:block;text-align:center;margin-top:10px;font-size:clamp(21px,2.6vw,30px);color:var(--gold);letter-spacing:.02em;}
+  details.disc summary .hint{display:block;text-align:center;margin:16px 0 40px;font-size:clamp(21px,2.6vw,30px);color:var(--gold);letter-spacing:.02em;}
   details.disc[open] summary .hint{display:none;}
   @media (prefers-reduced-motion:reduce){details.disc summary .chev{transition:none;}}
   details.disc[open] summary .chev{transform:rotate(45deg);}
@@ -226,7 +231,7 @@
 
     <div class="project">
       <div class="p-head"><h3>Porter</h3><span class="p-kind">Autonomous mobile robot</span></div>
-      <p>Building an autonomous indoor delivery robot designed to reduce repetitive delivery work for staff in hotels, residences, and hospitals. Porter combines secure cargo compartments, LiDAR and depth sensing, and ROS 2 navigation for real buildings.</p>
+      <p>In 2026, I'm building an autonomous indoor delivery robot designed to reduce repetitive delivery work for staff in hotels, residences, and hospitals. Porter combines secure cargo compartments, LiDAR and depth sensing, and ROS 2 navigation for real buildings.</p>
       <figure class="shot free"><img src="images/onat-cakici-porter-delivery-robot.jpg" alt="Porter autonomous indoor delivery robot, a CAD render showing the wheeled base, three secure cargo compartments labeled A, B, and C, and an expressive display"></figure>
     </div>
 
@@ -234,7 +239,7 @@
       <div class="p-head"><h3>Rescue Robotic Arm</h3><span class="p-kind">Soft robotics / field deployment</span></div>
       <p>At 16, I helped build a telescoping robotic arm used alongside firefighters to pull a trapped puppy to safety. We heard the news while preparing for a robotics competition and built it within three hours, with a soft gripper for field use.</p>
       <p class="press">Covered by <a class="p-link" href="https://www.reuters.com/article/lifestyle/rescue-of-puppy-from-istanbul-well-captivates-turks-idUSKBN15U1Y8/" target="_blank" rel="noopener">Reuters</a> · <a class="p-link" href="https://www.euronews.com/2017/02/15/robotic-arm-used-to-save-puppy-from-well" target="_blank" rel="noopener">Euronews</a> · <a class="p-link" href="https://nypost.com/video/puppy-trapped-in-well-captivates-the-entire-country-of-turkey/" target="_blank" rel="noopener">New York Post</a></p>
-      <figure class="shot free cap-fig"><video src="images/rescue-documentary.mp4" controls playsinline preload="metadata"></video><figcaption class="cap-text">Footage from the Japanese TV program 奇跡体験!アンビリバボー (Kiseki Taiken! Unbelievable), which featured the rescue.</figcaption></figure>
+      <figure class="shot free cap-fig"><video src="images/rescue-documentary.mp4" autoplay controls playsinline preload="auto"></video><figcaption class="cap-text">Footage from the Japanese TV program 奇跡体験!アンビリバボー (Kiseki Taiken! Unbelievable), which featured the rescue.</figcaption></figure>
       <figure class="shot free cap-fig"><img src="images/rescue-robotic-arm-lowered-into-well.jpg" alt="Onat Cakici connecting the battery to charge the pneumatic reservoir for the rescue arm's gripper during the well rescue" loading="lazy"><figcaption class="cap-text">That's me connecting the battery to recharge the gripper's pneumatic tanks after a line broke, just before we lowered the arm into the well.</figcaption></figure>
       <div class="gallery free bal">
         <figure class="shot"><img src="images/onat-cakici-rescue-robotic-arm.jpg" alt="Onat Cakici and a teammate holding the telescoping pneumatic rescue arm and soft gripper they built" loading="lazy"><figcaption class="cap-text">Me and my friend with the arm we built.</figcaption></figure>
@@ -244,11 +249,14 @@
 
     <div class="project">
       <div class="p-head"><h3>RangerEye</h3><span class="p-kind">Autonomous VTOL / wildfire</span></div>
-      <p>Led a nine-engineer team developing an autonomous VTOL designed to help detect wildfires earlier in remote areas. I worked across autonomy, flight testing, charging, and ground-station integration.</p>
+      <p>In 2024-2025, I led a nine-engineer team developing an autonomous VTOL designed to help detect wildfires earlier in remote areas. I worked across autonomy, flight testing, charging, and ground-station integration.</p>
       <a class="p-link" href="https://www.rangereye.org" target="_blank" rel="noopener">rangereye.org ↗</a>
       <figure class="shot free"><video src="images/rangereye-ground-station.mp4" autoplay muted loop playsinline></video></figure>
       <figure class="shot free"><img src="images/onat-cakici-ranger-eye-vtol-wildfire-drone.jpg" alt="Onat Cakici with the RangerEye autonomous VTOL wildfire drone at the Florida Tech Student Design Showcase" loading="lazy"></figure>
-      <figure class="shot free portrait"><video src="images/rangereye-lights.mp4" autoplay muted loop playsinline></video></figure>
+      <div class="vid-aside">
+        <figure class="shot free portrait"><video src="images/rangereye-lights.mp4" autoplay muted loop playsinline></video></figure>
+        <p class="aside-text">The airframe is 3D printed and can be manufactured in under 24 hours.</p>
+      </div>
       <div class="gallery free">
         <figure class="shot"><img src="images/ranger-eye-aircraft-docked-ground-station.jpg" alt="RangerEye VTOL drone docked in its self-charging ground station" loading="lazy"></figure>
         <figure class="shot"><img src="images/ranger-eye-team-firefighters-melbourne.jpg" alt="RangerEye engineering team with the drone at a Melbourne fire station" loading="lazy"></figure>
