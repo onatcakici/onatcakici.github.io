@@ -25,7 +25,7 @@
   "name": "Onat Cakici",
   "jobTitle": "Robotics Engineer",
   "url": "https://onatcakici.github.io/",
-  "image": "https://onatcakici.github.io/images/onat-cakici-porter-delivery-robot.jpg",
+  "image": "https://onatcakici.github.io/images/onat-cakici-portrait.jpg",
   "sameAs": [
     "https://www.linkedin.com/in/cakici/",
     "https://www.rangereye.org"
@@ -200,6 +200,9 @@
     padding-bottom:2px;border-bottom:2px solid var(--rule);margin:0 0 14px;}
   .contact .links a:hover{border-bottom-color:var(--gold);color:#fff;}
   .contact .links{display:flex;flex-direction:column;align-items:flex-start;}
+  .contact-row{display:flex;gap:32px;align-items:center;}
+  .contact-row .headshot{width:170px;height:170px;flex:0 0 auto;object-fit:cover;border:1px solid var(--rule);display:block;}
+  @media (max-width:620px){.contact-row{flex-direction:column;align-items:flex-start;gap:20px;}}
 
   footer{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
     padding-top:40px;border-top:1px solid var(--rule);
@@ -339,10 +342,15 @@
   </section>
 
   <section id="contact" class="contact">
-    <p class="contact-cta">Building something useful? Let's talk.</p>
-    <div class="links">
-      <a href="mailto:onatcakici@protonmail.com">onatcakici@protonmail.com</a>
-      <a href="https://www.linkedin.com/in/cakici/">linkedin.com/in/cakici</a>
+    <div class="contact-row">
+      <img class="headshot" src="images/onat-cakici-portrait.jpg" alt="Onat Cakici, robotics engineer" loading="lazy">
+      <div class="contact-main">
+        <p class="contact-cta">Building something useful? Let's talk.</p>
+        <div class="links">
+          <a href="mailto:onatcakici@protonmail.com">onatcakici@protonmail.com</a>
+          <a href="https://www.linkedin.com/in/cakici/">linkedin.com/in/cakici</a>
+        </div>
+      </div>
     </div>
   </section>
 
