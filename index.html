@@ -3,12 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0d1420">
+<meta name="theme-color" content="#0B0B0C">
 <title>Onat Cakici · Robotics Engineer · Autonomous Systems</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230d1420'/><g fill='none' stroke='%237fa8ff' stroke-width='2.6'><circle cx='32' cy='32' r='21'/><ellipse cx='32' cy='32' rx='21' ry='8'/><ellipse cx='32' cy='32' rx='8' ry='21'/></g></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230B0B0C'/><g fill='none' stroke='%23FF4B1F' stroke-width='2.6'><circle cx='32' cy='32' r='21'/><ellipse cx='32' cy='32' rx='21' ry='8'/><ellipse cx='32' cy='32' rx='8' ry='21'/></g></svg>">
 <meta name="description" content="Onat Cakici is a robotics engineer building autonomous systems on real hardware, including indoor delivery robots, VTOL drones, quadcopters, and competition robots.">
 <link rel="canonical" href="https://onatcakici.github.io/">
-<link rel="stylesheet" href="css/site.css?v=bp1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/site.css?v=ed4">
 
 <!-- SEO / social -->
 <meta property="og:type" content="website">
@@ -37,111 +40,62 @@
 }
 </script>
 </head>
-<body>
+<body class="home">
 <div class="wrap">
 
   <header class="bar">
-    <span>Onat Cakici / Robotics Engineer</span>
+    <span>Onat Cakici</span>
     <nav class="r">
-      <a href="#work">Work</a>
-      <a href="#skills">Capabilities</a>
-      <a href="#contact">Contact</a>
+      <a href="about.html">About</a>
+      <a href="about.html#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>I build robots that help in the real world.</h1>
-    <p>At 16, I helped build a robot used alongside firefighters during a puppy rescue.
-    Since then: autonomous aircraft for wildfire detection, competition robots,
-    and mobile robots for real buildings.</p>
-  </section>
+
+  <h1 class="statement">I build robots that help in the real world.</h1>
 
   <h2 class="sec-label" id="work">Index of machines</h2>
 
   <div class="grid">
     <a class="sheet" href="porter.html">
       <div class="img"><img src="images/onat-cakici-porter-delivery-robot.jpg" width="1500" height="1106" fetchpriority="high" alt="CAD render of Porter, an autonomous indoor delivery robot with three secure cargo compartments and an expressive display"></div>
-      <div class="tblock"><div class="no">001</div><div class="ttl">Porter</div><div class="yr">2026</div></div>
+      <div class="tblock"><div class="no">005</div><div class="ttl">Porter</div><div class="yr">2026</div></div>
       <div class="specs"><b>Autonomous mobile robot</b> · NAV <b>ROS 2 / LiDAR</b><br>
       <span class="status">Prototype</span></div>
     </a>
 
     <a class="sheet" href="rescue-arm.html">
-      <div class="img"><img src="images/rescue-robotic-arm-lowered-into-well.jpg" alt="The rescue arm being prepared at the well at night, surrounded by firefighters, moments before the rescue" loading="lazy"></div>
-      <div class="tblock"><div class="no">002</div><div class="ttl">Rescue Arm</div><div class="yr">2017</div></div>
+      <div class="img"><img src="images/rescue-robotic-arm-assembled.jpg" width="1440" height="1080" loading="lazy" alt="The assembled telescoping rescue arm with soft gripper"></div>
+      <div class="tblock"><div class="no">001</div><div class="ttl">Rescue Arm</div><div class="yr">2017</div></div>
       <div class="specs"><b>Telescoping / soft gripper</b> · PRESS <b>Reuters · Euronews</b><br>
       <span class="status">Field deployed</span></div>
     </a>
 
     <a class="sheet" href="rangereye.html">
-      <div class="img"><video src="images/card-rangereye-ground-station.mp4" autoplay muted loop playsinline poster="images/ranger-eye-aircraft-docked-ground-station.jpg" aria-label="RangerEye VTOL operating with its self-charging ground station (silent looping clip)"></video></div>
-      <div class="tblock"><div class="no">003</div><div class="ttl">RangerEye</div><div class="yr">2024-25</div></div>
-      <div class="specs"><b>Autonomous VTOL</b> · AIRFRAME <b>3D printed &lt; 24 hrs</b><br>
-      <span class="status">Flight tested</span></div>
+      <div class="img"><img src="images/onat-cakici-ranger-eye-vtol-wildfire-drone.jpg" width="1700" height="1400" loading="lazy" alt="Onat Cakici with the RangerEye autonomous VTOL wildfire drone"></div>
+      <div class="tblock"><div class="no">004</div><div class="ttl">RangerEye</div><div class="yr">2024-25</div></div>
+      <div class="specs"><b>Autonomous VTOL</b> · AIRFRAME <b>3D printed &lt; 24 hrs</b></div>
     </a>
 
     <a class="sheet" href="frc.html">
-      <div class="img"><video src="images/card-frc-robot.mp4" autoplay muted loop playsinline poster="images/onat-cakici-frc-team-integra-3646-robot.jpg" aria-label="Team Integra 3646 FRC robot during testing (silent looping clip)"></video></div>
-      <div class="tblock"><div class="no">004</div><div class="ttl">FRC 3646</div><div class="yr"></div></div>
+      <div class="img"><img src="images/onat-cakici-frc-team-integra-3646-robot.jpg" width="1024" height="768" loading="lazy" alt="Onat Cakici with the Team Integra 3646 FRC competition robot at the FIRST World Championship"></div>
+      <div class="tblock"><div class="no">002</div><div class="ttl">FRC 3646</div><div class="yr"></div></div>
       <div class="specs"><b>Competition robotics</b> · RESULT <b>FIRST Championship ×2</b></div>
     </a>
 
     <a class="sheet" href="multirotors.html">
-      <div class="img"><img src="images/onat-cakici-autonomous-quadcopter.jpg" alt="Custom hand-built autonomous quadcopter with a carbon-fiber frame and Pixhawk flight controller" loading="lazy"></div>
-      <div class="tblock"><div class="no">005</div><div class="ttl">Multirotors</div><div class="yr"></div></div>
+      <div class="img"><img src="images/onat-cakici-autonomous-quadcopter.jpg" width="1071" height="1200" alt="Custom hand-built autonomous quadcopter with a carbon-fiber frame and Pixhawk flight controller" loading="lazy"></div>
+      <div class="tblock"><div class="no">003</div><div class="ttl">Multirotors</div><div class="yr"></div></div>
       <div class="specs"><b>Custom drones</b> · STACK <b>OpenCV / Raspberry Pi</b></div>
     </a>
 
     <a class="sheet" href="early-builds.html">
-      <div class="img"><img src="images/solar-car.jpg" alt="Onat Cakici welding the aluminum space-frame chassis of a full-size solar car during high school" loading="lazy"></div>
+      <div class="img"><img src="images/rc-solar-car.jpg" width="717" height="960" loading="lazy" alt="Onat Cakici at age 11 with the radio-controlled solar car he built"></div>
       <div class="tblock"><div class="no">000</div><div class="ttl">Early Builds</div><div class="yr">2012+</div></div>
       <div class="specs"><b>Solar power</b> · BUILT <b>Ages 11-16</b></div>
     </a>
   </div>
 
-  <h2 class="sec-label">Background</h2>
-  <div class="spec-table">
-    <div class="spec-row">
-      <span class="k">B.S., Aerospace Eng.</span>
-      <span class="v">Florida Institute of Technology</span>
-      <span class="m">2025</span>
-    </div>
-    <div class="spec-row">
-      <span class="k">Rowing</span>
-      <span class="v">Three-time Turkish national champion. Rowed through high school and college.</span>
-      <span class="m"></span>
-    </div>
-  </div>
-
-  <h2 class="sec-label" id="skills">Capabilities</h2>
-  <dl class="spec-table" style="margin:0;">
-    <div class="spec-row"><dt>Autonomy</dt><dd>ROS 2 / Nav2, SLAM, sensor fusion, path planning, PID tuning</dd><span class="m"></span></div>
-    <div class="spec-row"><dt>Perception</dt><dd>OpenCV, LiDAR, depth cameras, GPS, telemetry</dd><span class="m"></span></div>
-    <div class="spec-row"><dt>Embedded</dt><dd>NVIDIA Jetson, Raspberry Pi, Pixhawk, ArduPilot, Arduino</dd><span class="m"></span></div>
-    <div class="spec-row"><dt>Software</dt><dd>Python, C++, C, MATLAB, Linux</dd><span class="m"></span></div>
-    <div class="spec-row"><dt>Mechanical</dt><dd>Fusion 360, drivetrain design, mechanisms, FEA, 3D printing</dd><span class="m"></span></div>
-    <div class="spec-row"><dt>Fabrication</dt><dd>Carbon-fiber layup, autoclave curing, machining, rapid prototyping</dd><span class="m"></span></div>
-    <div class="spec-row"><dt>Certified</dt><dd>FAA Part 107 Remote Pilot · Private Pilot in progress</dd><span class="m"></span></div>
-  </dl>
-
-  <h2 class="sec-label" id="contact">Contact</h2>
-  <div class="contact-panel">
-    <img src="images/onat-cakici-portrait.jpg" alt="Onat Cakici, robotics engineer" loading="lazy">
-    <div>
-      <p class="cta">Building something useful? Let's talk.</p>
-      <div class="links">
-        <a href="mailto:onatcakici@protonmail.com">onatcakici@protonmail.com</a>
-        <a href="https://www.linkedin.com/in/cakici/">linkedin.com/in/cakici</a>
-      </div>
-    </div>
-  </div>
-
-  <footer class="bar">
-    <span>© 2026 Onat Cakici · FL, USA</span>
-    <a href="mailto:onatcakici@protonmail.com">onatcakici@protonmail.com</a>
-  </footer>
-
 </div>
-<script>if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.pause();});}</script>
 </body>
 </html>
